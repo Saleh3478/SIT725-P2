@@ -7,9 +7,9 @@ var path = require('path');
 var mongoose = require('mongoose');
 
 //Set up default mongoose connection
-var mongoDB = "mongodb+srv://pii:pii@cluster0.7etuy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+var mongoDB = 'mongodb+srv://pii:pii@cluster0.7etuy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
-mongoose.connect(mongoDB,{ useNewUrlParser: true });
+mongoose.connect(mongoDB,{ useNewUrlParser: true, useUnifiedTopology: true });
 
 //Get the default connection
 var db = mongoose.connection;
